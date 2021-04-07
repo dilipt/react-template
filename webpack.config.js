@@ -4,13 +4,13 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: path.resolve(__dirname, './src/index.tsx'),
   mode: 'development',
   module: {
     rules: [{
-      test: /\.(js|jsx)$/,
+      test: /\.(ts|tsx)$/,
       exclude: /node_modules/,
-      use: ['babel-loader'],
+      use: ['ts-loader'],
     }, {
       test: /\.(jpg|png|svg|ico)$/i,
       type: 'asset/resource',
@@ -18,7 +18,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, './src'), 'node_modules'],
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.ts', '.tsx'],
   },
   output: {
     path: path.resolve(__dirname, './dist'),
