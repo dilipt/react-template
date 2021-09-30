@@ -25,7 +25,6 @@ module.exports = {
     filename: 'bundle.[fullhash].js',
   },
   devServer: {
-    contentBase: './dist',
     port: 3000,
     hot: true,
     historyApiFallback: true,

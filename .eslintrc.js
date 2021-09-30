@@ -27,7 +27,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': 'off',
     'import/extensions': [0, {}],
-    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.tsx', '**/*.test.ts'] }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: ['**/*.test.tsx', '**/*.test.ts', '*.js'] }],
   },
   settings: {
     'import/resolver': 'webpack',
